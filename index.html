@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Закулісся · закритий клуб Тані Остапенко</title>
+<meta name="description" content="Закритий Telegram-клуб продюсерки онлайн-проєктів у Європі. Досвід, якого немає у відкритому доступі. 299 ₴ на місяць.">
+<meta property="og:title" content="Закулісся · закритий клуб Тані Остапенко">
+<meta property="og:description" content="Досвід, якого немає у відкритому доступі. 299 ₴ на місяць для перших 100 учасниць.">
+<meta property="og:image" content="https://smmtanya.github.io/og.jpg">
+<meta property="og:url" content="https://smmtanya.github.io/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: warm milky page, soft dark text (no black, no pure white), Playfair headlines with wine italics, Manrope for reading. */
+:root{
+  --bg:#FBF8F4;
+  --card:#FFFDFA;
+  --blush:#F6EDEB;
+  --head:#33292B;
+  --text:#4A4143;
+  --soft:#776C6D;
+  --line:#EAE2DD;
+  --wine:#8A2C38;
+  --wine-hover:#74222D;
+  --serif:"Playfair Display", Georgia, "Times New Roman", serif;
+  --sans:"Manrope", "Segoe UI", system-ui, sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:18px;line-height:1.75}
+.band{padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px))}
+.in{max-width:1080px;margin:0 auto}
+.narrow{max-width:700px;margin:0 auto}
+h1,h2,h3{font-family:var(--serif);font-weight:700;color:var(--head);line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.005em}
+em{font-family:var(--serif);font-style:italic;color:var(--wine);font-weight:700}
+p{margin:0}
+p + p{margin-top:16px}
+.label{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--wine)}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:var(--sans);font-weight:600;font-size:16px;text-decoration:none;
+  padding:17px 28px;border-radius:12px;border:1px solid var(--wine);background:var(--wine);color:#FFF8F5;cursor:pointer;transition:background .2s ease}
+.btn:hover{background:var(--wine-hover)}
+.btn.soft{background:transparent;color:var(--wine)}
+.btn.soft:hover{background:var(--blush)}
+.btn:focus-visible,button:focus-visible,summary:focus-visible,a:focus-visible{outline:2px solid var(--wine);outline-offset:3px}
+.btn[aria-disabled="true"]{opacity:.5;cursor:default}
+section{padding-block:96px}
+.h2{font-size:clamp(34px,4.6vw,52px)}
+
+nav{padding-block:22px}
+nav .in{display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:var(--serif);font-weight:700;font-size:22px;color:var(--head)}
+nav a{font-size:15px;font-weight:600;color:var(--wine);text-decoration:none}
+
+/* hero */
+.hero{padding-block:36px 96px}
+.hero .in{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+.hero h1{font-size:clamp(44px,6.6vw,80px);line-height:1.02}
+.hero .intro{margin-top:26px;max-width:46ch;font-size:19px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.portrait{justify-self:center;width:min(420px,100%)}
+.portrait .frame{aspect-ratio:3/4;border-radius:220px 220px 20px 20px;overflow:hidden;background:var(--blush)}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block}
+.portrait p{text-align:center;margin-top:14px;font-family:var(--serif);font-style:italic;font-weight:600;font-size:19px;color:var(--soft)}
+
+/* why closed */
+.why{background:var(--card);border-block:1px solid var(--line)}
+.quote{margin-top:32px;padding:26px 28px;border-left:3px solid var(--wine);background:var(--bg);border-radius:0 14px 14px 0;font-family:var(--serif);font-style:italic;font-weight:600;font-size:clamp(22px,2.4vw,27px);line-height:1.4;color:var(--head)}
+
+/* about */
+.about .in{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:center}
+.about .photo{border-radius:20px;overflow:hidden;aspect-ratio:4/5;background:var(--blush)}
+.about .photo img{width:100%;height:100%;object-fit:cover;display:block}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:34px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px}
+.fact b{display:block;font-family:var(--serif);font-weight:700;font-size:32px;line-height:1.1;color:var(--wine);font-variant-numeric:tabular-nums}
+.fact span{font-size:15px;color:var(--soft)}
+
+/* topics */
+.topics{background:var(--card);border-block:1px solid var(--line)}
+.topic-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 48px;margin-top:40px}
+.topic{padding-block:26px;border-top:1px solid var(--line);min-width:0}
+.topic h3{font-size:clamp(24px,2.6vw,30px);margin-bottom:10px}
+
+/* test */
+.test{background:var(--blush)}
+.test .in{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
+.test .intro p{margin-top:20px;max-width:40ch}
+.quiz{background:var(--card);border-radius:20px;padding:34px;min-width:0;box-shadow:0 20px 50px -34px rgba(90,40,45,.35)}
+.progress{display:flex;gap:6px;margin-bottom:22px}
+.progress i{flex:1;height:3px;border-radius:3px;background:var(--line)}
+.progress i.on{background:var(--wine)}
+.q-num{font-size:14px;color:var(--soft)}
+.q-title{font-family:var(--serif);font-weight:700;color:var(--head);font-size:clamp(24px,2.6vw,29px);line-height:1.2;margin-block:6px 22px}
+.opts{display:grid;gap:10px}
+.opt{width:100%;text-align:left;font:inherit;font-size:17px;padding:15px 18px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--head);cursor:pointer;transition:border-color .15s ease, background .15s ease}
+.opt:hover{border-color:var(--wine);background:var(--card)}
+.result h3{font-size:clamp(26px,2.8vw,32px);margin-block:8px 14px}
+.steps-list{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:12px;counter-reset:p}
+.steps-list li{counter-increment:p;display:grid;grid-template-columns:30px 1fr;gap:10px;padding:14px 16px;border-radius:12px;background:var(--bg)}
+.steps-list li::before{content:counter(p);font-family:var(--serif);font-style:italic;font-weight:700;font-size:24px;line-height:1.1;color:var(--wine)}
+.steps-list b{color:var(--head);font-weight:600}
+.after{margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+.row{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px;align-items:center}
+.linkbtn{font:inherit;font-size:15px;font-weight:600;background:none;border:0;color:var(--wine);cursor:pointer;text-decoration:underline;padding:6px 0}
+
+/* how */
+.how .in{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
+.how ul{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:14px}
+.how li{display:grid;grid-template-columns:22px 1fr;gap:10px}
+.how li::before{content:"✦";color:var(--wine);font-size:14px;line-height:2.1}
+.how .photo{border-radius:20px;overflow:hidden;aspect-ratio:4/5;background:var(--blush)}
+.how .photo img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* price */
+.price{background:var(--card);border-block:1px solid var(--line);text-align:center}
+.amount{font-family:var(--serif);font-weight:700;font-size:clamp(88px,13vw,140px);line-height:1;color:var(--wine);margin-top:10px;font-variant-numeric:tabular-nums}
+.amount small{font-family:var(--sans);font-weight:600;font-size:20px;color:var(--text);margin-left:6px}
+.price .narrow p{margin-top:18px}
+.price .btn{margin-top:30px;min-width:260px}
+.price .note{margin-top:12px;font-size:15px;color:var(--soft)}
+
+/* faq */
+details{border-bottom:1px solid var(--line);padding-block:20px}
+details:first-of-type{border-top:1px solid var(--line);margin-top:30px}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;font-weight:600;color:var(--head)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--serif);font-size:26px;line-height:.9;color:var(--wine)}
+details[open] summary::after{content:"−"}
+details p{margin-top:10px}
+
+footer{padding-block:36px 52px;font-size:14px;color:var(--soft);border-top:1px solid var(--line)}
+footer .in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px}
+footer a{color:var(--wine)}
+
+@media (max-width:880px){
+  .hero .in,.about .in,.test .in,.how .in{grid-template-columns:1fr}
+  .topic-grid{grid-template-columns:1fr}
+  .hero{padding-block:12px 72px}
+  .hero .in{gap:48px}
+  .portrait{width:min(360px,100%)}
+  .about .photo,.how .photo{max-width:420px}
+  section{padding-block:72px}
+  .quiz{padding:24px}
+  .hero .cta .btn,.price .btn{width:100%}
+}
+@media (max-width:480px){.facts{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+
+<nav class="band">
+  <div class="in">
+    <div class="logo">Закулісся</div>
+    <div style="display:flex;gap:22px;align-items:center">
+      <a href="https://www.instagram.com/smm_tanya__/" target="_blank" rel="noopener">Instagram</a>
+      <a href="#price">Вступити в клуб</a>
+    </div>
+  </div>
+</nav>
+
+<header class="band hero">
+  <div class="in">
+    <div>
+      <div class="label">Закритий клуб Тані Остапенко</div>
+      <h1 style="margin-top:16px">Досвід, якого <em>немає у відкритому доступі</em></h1>
+      <div class="intro">
+        <p>Я продюсерка онлайн-проєктів експертів у Європі. Працюю онлайн з 15 років, і майже весь цей час з норвезьким ринком.</p>
+        <p>У клубі я показую свою роботу зсередини: як веду проєкти, звідки беруться клієнти і як я все встигаю майже без команди.</p>
+      </div>
+      <div class="cta">
+        <a class="btn pay-btn" href="#price">Вступити за 299 ₴ на місяць</a>
+        <a class="btn soft" href="#test">Пройти короткий тест</a>
+      </div>
+    </div>
+    <div class="portrait">
+      <div class="frame"><img src="hero.jpg" alt="Таня Остапенко" width="1000" height="1333"></div>
+      <p>Таня Остапенко</p>
+    </div>
+  </div>
+</header>
+
+<section class="band why">
+  <div class="narrow">
+    <div class="label">Чому закритий клуб</div>
+    <h2 class="h2" style="margin-top:12px">Знань зараз безліч. <em>Досвід</em> мають одиниці</h2>
+    <p style="margin-top:24px">Будь-яку інформацію сьогодні можна знайти в інтернеті або запитати у штучного інтелекту. А от досвід, як реально будуються проєкти, як ухвалюються рішення і що робити, коли щось іде не так, не знайдеш ніде. Люди з таким досвідом про нього зазвичай не розповідають.</p>
+    <p>Мені хочеться ділитися тим, що я роблю. Але не у відкритому доступі. Тому я створила закритий простір, де бачу, хто мене читає, і можу говорити відверто.</p>
+    <p>У 2023 році я вже запускала повноцінне навчання. Це величезна робота один на один, і робити її потрібно якісно. Зараз я дуже ціную свій час, енергію і знання, і на такий формат у мене немає ресурсу. Клуб дозволяє показувати буденну роботу і відповідати на питання у комфортному для всіх режимі. Тому й ціна символічна.</p>
+    <div class="quote">Я ділюсь не теорією, а тим, що роблю кожного дня в реальних проєктах.</div>
+  </div>
+</section>
+
+<section class="band about">
+  <div class="in">
+    <div class="photo"><img src="about.jpg" alt="Таня з букетом троянд" width="886" height="1181" loading="lazy"></div>
+    <div>
+      <div class="label">Про мене</div>
+      <h2 class="h2" style="margin-top:12px">Від СММ у 15 до <em>продюсерки</em></h2>
+      <p style="margin-top:22px">Я навчалась на маркетолога в університеті, але головне, чого я навчилась, мені дала практика. Почала зі СММ, а зараз фактично керую частиною бізнесу своїх клієнтів: стратегія, продукти, запуски, тексти, підтримка, цифри.</p>
+      <p>Я майже не веду свої соцмережі, але в мене постійно є заявки на роботу і нові проєкти. У своїй ніші я маю хорошу репутацію, мені пишуть на консультації, хоча знайти на них час один на один дуже складно.</p>
+      <p>Звісно, були і невдалі проєкти. Я почала у 15, і саме на них я навчилась найбільшому. Про це я теж розповідаю в клубі.</p>
+      <div class="facts">
+        <div class="fact"><b>з 15 років</b><span>працюю онлайн</span></div>
+        <div class="fact"><b>6,5 років</b><span>з норвезьким ринком</span></div>
+        <div class="fact"><b>$150 000+</b><span>на рік роблять мої клієнти разом</span></div>
+        <div class="fact"><b>1 + ШІ</b><span>одна помічниця і автоматизація замість команди</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band topics">
+  <div class="in">
+    <div class="label">Що всередині</div>
+    <h2 class="h2" style="margin-top:12px; max-width:20ch">Чим я ділюсь <em>у клубі</em></h2>
+    <div class="topic-grid">
+      <div class="topic"><h3>Онлайн <em>у 2026</em></h3><p>Як зайти в онлайн зараз і які є варіанти для доходу. Їх безліч, і більшість людей про них навіть не знає.</p></div>
+      <div class="topic"><h3>Звідки беруться <em>клієнти</em></h3><p>Чому до мене постійно приходять заявки, хоча я майже не веду соцмережі. Де шукати клієнтів у теперішніх реаліях, коли розсилки вже майже не працюють.</p></div>
+      <div class="topic"><h3>Європа <em>без англійської</em></h3><p>Як працювати на європейський ринок. Якщо ви знаєте англійську, це величезний плюс. Якщо ні, це абсолютно не заважає.</p></div>
+      <div class="topic"><h3>Закулісся <em>проєктів</em></h3><p>Які кроки ми робимо з експертами, як я цим усім управляю і як автоматизація допомагає економити час і заробляти більше.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band test" id="test">
+  <div class="in">
+    <div class="intro">
+      <div class="label">Безкоштовно</div>
+      <h2 class="h2" style="margin-top:12px">Що зараз заважає вам <em>заробляти більше</em>?</h2>
+      <p>Три питання. В кінці я напишу 3 кроки, з яких я б почала на вашому місці.</p>
+    </div>
+    <div class="quiz" id="quizBox" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="band how">
+  <div class="in">
+    <div>
+      <div class="label">Як це влаштовано</div>
+      <h2 class="h2" style="margin-top:12px">Без уроків і <em>без домашок</em></h2>
+      <p style="margin-top:20px">Закритий Telegram, де все розкладено по окремих папках, щоб ви швидко знаходили потрібне.</p>
+      <ul>
+        <li>буденна робота з експертами: які кроки ми робимо і чому</li>
+        <li>можливості для доходу і де шукати клієнтів</li>
+        <li>робота на європейський ринок</li>
+        <li>автоматизація і ШІ, які економлять мені години щодня</li>
+        <li>окрема папка для спілкування і ваших питань до мене</li>
+      </ul>
+    </div>
+    <div class="photo"><img src="work.jpg" alt="Таня в окулярах" width="886" height="1181" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="band price" id="price">
+  <div class="narrow">
+    <div class="label">Символічна ціна</div>
+    <div class="amount">299<small>₴ / міс</small></div>
+    <p>Це ціна для перших 100 людей. Далі буде 449 ₴, але якщо ви зайшли за 299, для вас вона вже не зміниться.</p>
+    <p>Оплачуєте через WayForPay і одразу після оплати переходите в закритий Telegram-форум клубу. Оплата списується раз на місяць, скасувати можна будь-коли.</p>
+    <a class="btn pay-btn" id="cta-pay" href="#price">Вступити в клуб</a>
+    <p class="note" id="pay-note"></p>
+  </div>
+</section>
+
+<section class="band faq">
+  <div class="narrow">
+    <h2 class="h2">Питання</h2>
+    <details><summary>Мені точно не потрібна англійська?</summary><p>Ні. У Європі багато експертів, які говорять українською і російською, і їм потрібні люди, які розуміють їхню аудиторію. Англійська дає ще більше варіантів, але не є обов'язковою.</p></details>
+    <details><summary>Це курс?</summary><p>Ні. Я показую свою роботу як є, а ви берете те, що потрібно вам.</p></details>
+    <details><summary>Чи можна консультацію один на один?</summary><p>Іноді я їх беру, але часу на них дуже мало. У клубі можна поставити питання і отримати відповідь без окремої консультації.</p></details>
+    <details><summary>Ви назвете своїх клієнтів?</summary><p>Ні. Я показую процеси і цифри, але без імен і чужих даних.</p></details>
+    <details><summary>Як скасувати підписку?</summary><p>Напишіть мені або скасуйте регулярний платіж у листі від WayForPay. Наступного місяця гроші не спишуться.</p></details>
+  </div>
+</section>
+
+<footer class="band">
+  <div class="in">
+    <span>ФОП Остапенко Тетяна · Україна</span>
+    <span>tania.ostapenko3@gmail.com</span>
+    <a href="https://www.instagram.com/smm_tanya__/" target="_blank" rel="noopener">Instagram @smm_tanya__</a>
+    <a href="oferta.html" target="_blank" rel="noopener">Публічна оферта</a>
+  </div>
+</footer>
+
+<script>
+const PAY_URL = "https://secure.wayforpay.com/sub/zakulissia"; // посилання на оплату WayForPay
+(function(){
+  document.querySelectorAll(".pay-btn").forEach(function(b){
+    if (PAY_URL) { b.href = PAY_URL; b.target = "_blank"; b.rel = "noopener"; }
+    else if (b.id === "cta-pay") { b.setAttribute("aria-disabled","true"); b.removeAttribute("href"); }
+  });
+  if (!PAY_URL) document.getElementById("pay-note").textContent = "Оплата відкривається 9 листопада о 20:00";
+
+  const Q = [
+    {t:"Що зараз найбільше гальмує ваш дохід?", o:[["Мало нових клієнтів","clients"],["Клієнти є, але платять мало","grow"],["Не встигаю, працюю до ночі","time"],["Хочу на Європу, але не знаю з чого почати","europe"]]},
+    {t:"Як до вас зараз приходять клієнти?", o:[["Пишу людям сама, але відповідають рідко","clients"],["Через знайомих, і чек від цього не росте","grow"],["Клієнтів вистачає, я просто не встигаю","time"],["Тільки з України","europe"]]},
+    {t:"Що б ви хотіли змінити першим?", o:[["Щоб клієнти писали мені самі","clients"],["Брати більше за свою роботу","grow"],["Працювати менше годин","time"],["Знайти першого клієнта в Європі","europe"]]}
+  ];
+  const R = {
+    clients:{h:"Вам потрібно, щоб вас <em>бачили</em>",w:"Писати людям першою зараз майже не працює. Я б почала з того, щоб клієнти самі бачили вас і вашу роботу.",p:[
+      ["Будьте там, де читають ваші клієнти.","Threads, коментарі під постами експертів, спільноти вашої ніші."],
+      ["Показуйте результат роботи.","Один чесний пост про те, що ви зробили для клієнта, працює краще за десять повідомлень."],
+      ["Бережіть репутацію.","Найкращі проєкти приходять через рекомендації задоволених клієнтів."]]},
+    grow:{h:"Ви вже переросли <em>свою ціну</em>",w:"Коли ви просто виконуєте задачі, вам платять за години. Коли відповідаєте за результат, платять за результат.",p:[
+      ["Рахуйте цифри клієнта.","Знайте, скільки приніс запуск чи місяць вашої роботи."],
+      ["Беріть більше відповідальності.","Не «пишу сторіс», а «веду продажі». Так я сама виросла зі СММ у продюсерку."],
+      ["Новим клієнтам називайте нову ціну.","Старі можуть лишитись на старій."]]},
+    time:{h:"Вам потрібна <em>система</em>, а не більше годин",w:"Якщо ви не встигаєте, проблема зазвичай у тому, що все робиться руками.",p:[
+      ["Віддайте ШІ чернетки.","Розшифровки, перші варіанти текстів, ідеї."],
+      ["Зробіть шаблони для того, що повторюється.","Відповіді клієнтам, плани, звіти."],
+      ["Делегуйте дрібне.","Навіть одна людина на кілька годин на тиждень звільняє вам вечори."]]},
+    europe:{h:"Європа ближча, <em>ніж здається</em>",w:"У Європі багато експертів, які говорять українською і російською. Їм потрібні люди, які розуміють їхню аудиторію.",p:[
+      ["Шукайте україно- і російськомовних експертів, які живуть у Європі.","Вони платять у євро."],
+      ["Вивчіть, як там продають.","Наприклад, у Норвегії агресивні продажі не працюють взагалі."],
+      ["Англійська - це плюс, але не стоп.","Якщо знаєте її, у вас ще більше варіантів."]]}
+  };
+  const box = document.getElementById("quizBox");
+  let step = 0, score = {};
+  function render(){
+    if (step < Q.length){
+      const q = Q[step];
+      box.innerHTML = '<div class="progress">'+Q.map(function(_,i){return '<i class="'+(i<=step?'on':'')+'"></i>'}).join('')+'</div>'+
+        '<div class="q-num">Питання '+(step+1)+' з '+Q.length+'</div><div class="q-title">'+q.t+'</div><div class="opts">'+
+        q.o.map(function(o){return '<button class="opt" type="button" data-k="'+o[1]+'">'+o[0]+'</button>'}).join('')+'</div>';
+      box.querySelectorAll(".opt").forEach(function(b){ b.addEventListener("click", function(){ score[b.dataset.k]=(score[b.dataset.k]||0)+1; step++; render(); }); });
+      return;
+    }
+    const best = Object.keys(score).sort(function(a,b){return score[b]-score[a]})[0];
+    const r = R[best];
+    box.innerHTML = '<div class="result"><div class="label">Ваш результат</div><h3>'+r.h+'</h3><p>'+r.w+'</p>'+
+      '<p style="margin-top:20px;font-weight:600;color:var(--head)">З чого я б почала на вашому місці:</p><ol class="steps-list">'+
+      r.p.map(function(x){return '<li><span><b>'+x[0]+'</b> '+x[1]+'</span></li>'}).join('')+'</ol>'+
+      '<p class="after">У клубі я показую, як це виглядає в моїх проєктах.</p>'+
+      '<div class="row"><a class="btn" href="#price">Вступити в клуб</a><button class="linkbtn" type="button" id="again">Пройти ще раз</button></div></div>';
+    document.getElementById("again").addEventListener("click", function(){ step=0; score={}; render(); });
+  }
+  render();
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Портфоліо, яке продає · подарунок від Тані Остапенко</title>
+<meta name="description" content="Безкоштовний шаблон портфоліо для роботи онлайн: 5 готових прикладів під різні ролі, чекліст і як отримати перші кейси без досвіду.">
+<meta property="og:title" content="Портфоліо, яке продає · безкоштовний шаблон">
+<meta property="og:description" content="Шаблон портфоліо для роботи онлайн з прикладами під 5 ролей, чекліст і перші кейси без досвіду. Від Тані Остапенко.">
+<meta property="og:image" content="https://smmtanya.github.io/og.jpg">
+<meta property="og:url" content="https://smmtanya.github.io/portfolio.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#FBF8F4;--card:#FFFDFA;--blush:#F6EDEB;--head:#33292B;--text:#4A4143;--soft:#776C6D;--line:#EAE2DD;
+  --wine:#8A2C38;--wine-hover:#74222D;
+  --serif:"Playfair Display", Georgia, "Times New Roman", serif;
+  --sans:"Manrope", "Segoe UI", system-ui, sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:18px;line-height:1.75}
+.band{padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px))}
+.in{max-width:1000px;margin:0 auto}
+.narrow{max-width:720px;margin:0 auto}
+h1,h2,h3{font-family:var(--serif);font-weight:700;color:var(--head);line-height:1.1;margin:0;text-wrap:balance}
+em{font-family:var(--serif);font-style:italic;color:var(--wine);font-weight:700}
+p{margin:0}
+p + p{margin-top:14px}
+.label{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--wine)}
+.btn{display:inline-flex;align-items:center;justify-content:center;font:inherit;font-weight:600;font-size:16px;text-decoration:none;
+  padding:15px 24px;border-radius:12px;border:1px solid var(--wine);background:var(--wine);color:#FFF8F5;cursor:pointer;transition:background .2s ease}
+.btn:hover{background:var(--wine-hover)}
+.btn.soft{background:transparent;color:var(--wine)}
+.btn.soft:hover{background:var(--blush)}
+.btn:focus-visible,button:focus-visible,a:focus-visible{outline:2px solid var(--wine);outline-offset:3px}
+section{padding-block:72px}
+.h2{font-size:clamp(30px,4vw,44px)}
+
+nav{padding-block:22px}
+nav .in{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.logo{font-family:var(--serif);font-weight:700;font-size:22px;color:var(--head);text-decoration:none}
+nav a.link{font-size:15px;font-weight:600;color:var(--wine);text-decoration:none}
+
+.hero{padding-block:28px 64px}
+.hero h1{font-size:clamp(40px,6vw,68px);line-height:1.04;margin-top:14px}
+.hero .lead{margin-top:22px;max-width:56ch;font-size:19px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.chip{font-size:14px;font-weight:600;color:var(--head);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 14px}
+.from{display:flex;align-items:center;gap:14px;margin-top:30px}
+.from img{width:56px;height:56px;border-radius:50%;object-fit:cover}
+.from span{font-size:15px;color:var(--soft)}
+.from b{display:block;color:var(--head);font-weight:600;font-size:16px}
+
+/* builder */
+.builder{background:var(--card);border-block:1px solid var(--line)}
+.roles{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.role{font:inherit;font-size:16px;font-weight:600;padding:11px 16px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--head);cursor:pointer;transition:border-color .15s ease, background .15s ease}
+.role:hover{border-color:var(--wine)}
+.role[aria-pressed="true"]{background:var(--wine);border-color:var(--wine);color:#FFF8F5}
+.sheet{margin-top:30px;background:var(--bg);border:1px solid var(--line);border-radius:20px;padding:clamp(22px,4vw,40px)}
+.block{padding-block:20px;border-top:1px solid var(--line)}
+.block:first-child{border-top:0;padding-top:0}
+.block h3{font-size:22px;display:flex;gap:12px;align-items:baseline}
+.block h3 i{font-style:italic;color:var(--wine);font-size:24px;min-width:22px}
+.tip{font-size:15px;color:var(--soft);margin-top:6px}
+.ex{margin-top:12px;background:var(--card);border-radius:12px;padding:14px 18px;color:var(--head)}
+.ex ul{margin:0;padding-left:20px}
+.ex li + li{margin-top:4px}
+.ph{color:var(--wine);font-weight:600}
+.tools{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;align-items:center}
+.status{font-size:15px;color:var(--soft)}
+
+/* checklist */
+.check{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:10px}
+.check li{display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+.check input{width:20px;height:20px;margin:5px 0 0;accent-color:var(--wine)}
+.check label{cursor:pointer}
+.check b{color:var(--head);font-weight:600}
+.count{margin-top:14px;font-size:15px;color:var(--soft)}
+
+/* start */
+.start{background:var(--blush)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.card{background:var(--card);border-radius:16px;padding:22px 22px 24px;min-width:0}
+.card b{font-family:var(--serif);font-style:italic;font-size:30px;color:var(--wine);line-height:1}
+.card h3{font-size:21px;margin-block:10px 8px}
+.msg{margin-top:30px;background:var(--card);border-radius:16px;padding:22px 24px}
+.msg p.t{font-family:var(--serif);font-style:italic;font-weight:600;font-size:19px;color:var(--head);line-height:1.5}
+
+/* club */
+.club{text-align:center}
+.club .narrow p{margin-top:16px}
+.club .row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:28px}
+
+footer{padding-block:32px 48px;font-size:14px;color:var(--soft);border-top:1px solid var(--line)}
+footer .in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px}
+footer a{color:var(--wine)}
+
+@media (max-width:820px){
+  section{padding-block:56px}
+  .cards{grid-template-columns:1fr}
+  .tools .btn{flex:1 1 100%}
+}
+@media print{
+  nav,.tools,.roles,.club,.start .msg button,footer,.no-print{display:none!important}
+  body{background:#fff;font-size:13pt}
+  section{padding-block:18pt}
+  .builder,.start{background:#fff;border:0}
+  .sheet,.card,.ex,.check li{break-inside:avoid}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav class="band no-print">
+  <div class="in">
+    <a class="logo" href="index.html">Закулісся</a>
+    <a class="link" href="index.html#price">Закритий клуб</a>
+  </div>
+</nav>
+
+<header class="band hero">
+  <div class="in">
+    <div class="label">Подарунок · безкоштовно</div>
+    <h1>Портфоліо, яке <em>продає за вас</em></h1>
+    <p class="lead">Шаблон, за яким я сама дивлюсь на людей, коли шукаю когось у проєкт. Оберіть свою роль, і побачите готовий приклад, який можна просто переписати під себе.</p>
+    <div class="meta">
+      <span class="chip">5 ролей з прикладами</span>
+      <span class="chip">чекліст на 10 пунктів</span>
+      <span class="chip">перші кейси без досвіду</span>
+    </div>
+    <div class="from">
+      <img src="hero.jpg" alt="Таня Остапенко" width="56" height="56">
+      <span><b>Таня Остапенко</b>продюсерка онлайн-проєктів, 6 років у СММ</span>
+    </div>
+  </div>
+</header>
+
+<section class="band builder" id="template">
+  <div class="in">
+    <h2 class="h2">Оберіть <em>свою роль</em></h2>
+    <p style="margin-top:12px;max-width:60ch">Приклади навчальні. Замініть усе, що виділено кольором, на своє, і у вас готове портфоліо на одну сторінку.</p>
+    <div class="roles" role="group" aria-label="Роль">
+      <button class="role" data-role="edit" aria-pressed="true">Монтаж з ШІ</button>
+      <button class="role" data-role="threads" aria-pressed="false">Ведення Threads</button>
+      <button class="role" data-role="launch" aria-pressed="false">Асистент на запусках</button>
+      <button class="role" data-role="support" aria-pressed="false">Підтримка клієнтів</button>
+      <button class="role" data-role="tech" aria-pressed="false">Технічний спеціаліст</button>
+    </div>
+
+    <div class="sheet" id="sheet" aria-live="polite"></div>
+
+    <div class="tools">
+      <button class="btn" id="copy">Скопіювати шаблон</button>
+      <button class="btn soft" id="print">Зберегти як PDF</button>
+      <span class="status" id="status" role="status"></span>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="check">
+  <div class="narrow">
+    <h2 class="h2">Чекліст <em>перед відправкою</em></h2>
+    <p style="margin-top:12px">Пройдіться по ньому щоразу, коли надсилаєте портфоліо. Відмітки збережуться в цьому браузері.</p>
+    <ul class="check" id="checklist">
+      <li><input type="checkbox" id="c1"><label for="c1"><b>Одна послуга, а не «все по СММ».</b> Людина має зрозуміти за 5 секунд, з чим до вас іти</label></li>
+      <li><input type="checkbox" id="c2"><label for="c2"><b>Перше речення каже, що ви робите і для кого.</b> Без «привіт, мене звати»</label></li>
+      <li><input type="checkbox" id="c3"><label for="c3"><b>2-3 кейси з цифрою в результаті.</b> Охоплення, заявки, години, які ви зекономили</label></li>
+      <li><input type="checkbox" id="c4"><label for="c4"><b>Навчальні кейси підписані чесно.</b> Це не мінус, а плюс до довіри</label></li>
+      <li><input type="checkbox" id="c5"><label for="c5"><b>Скріни без чужих даних.</b> Імена, суми і контакти клієнтів замазані</label></li>
+      <li><input type="checkbox" id="c6"><label for="c6"><b>Видно, як ви працюєте.</b> 3-4 кроки, щоб людина не боялась починати</label></li>
+      <li><input type="checkbox" id="c7"><label for="c7"><b>Є хоча б один відгук.</b> Навіть від знайомого бізнесу, якому ви допомогли</label></li>
+      <li><input type="checkbox" id="c8"><label for="c8"><b>Читається за 2 хвилини.</b> Одна сторінка або короткий PDF</label></li>
+      <li><input type="checkbox" id="c9"><label for="c9"><b>Усі посилання відкриваються.</b> Перевірте з телефона</label></li>
+      <li><input type="checkbox" id="c10"><label for="c10"><b>Зв'язатися з вами можна в один клік.</b> Telegram або email наприкінці</label></li>
+    </ul>
+    <p class="count" id="count">Готово 0 з 10</p>
+  </div>
+</section>
+
+<section class="band start" id="start">
+  <div class="in">
+    <h2 class="h2">Немає кейсів? <em>Так починали всі</em></h2>
+    <p style="margin-top:12px;max-width:60ch">Мені було 15, коли я взяла перший проєкт, і портфоліо в мене не було взагалі. Ось як отримати перші кейси швидко.</p>
+    <div class="cards">
+      <div class="card"><b>1</b><h3>Навчальний проєкт</h3><p>Зробіть роботу для себе або знайомого бізнесу і чесно підпишіть: «навчальний кейс». Покажіть, що було до і що стало після.</p></div>
+      <div class="card"><b>2</b><h3>1-2 проєкти недорого</h3><p>Візьміть перші проєкти за мінімальну ціну, але зробіть їх на максимум. Головне тут не гроші, а результат і рекомендація.</p></div>
+      <div class="card"><b>3</b><h3>Показуйте процес</h3><p>Пишіть у соцмережах, що ви робите і чому. Клієнти приходять не на «шукаю роботу», а на людину, яка вже в темі.</p></div>
+    </div>
+    <div class="msg">
+      <div class="label">Шаблон: як попросити рекомендацію</div>
+      <p class="t" id="ask" style="margin-top:12px">«Дякую вам за спільну роботу, мені було дуже приємно працювати над [проєкт]. Якщо вам сподобався результат, чи могли б ви порекомендувати мене тим, кому теж може знадобитися [ваша послуга]? Для мене це найцінніше»</p>
+      <div class="tools no-print" style="margin-top:16px"><button class="btn soft" id="copyAsk">Скопіювати текст</button><span class="status" id="status2" role="status"></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="band club no-print">
+  <div class="narrow">
+    <div class="label">А якщо хочеться більше</div>
+    <h2 class="h2" style="margin-top:12px">Як це працює <em>в реальних проєктах</em></h2>
+    <p>У закритому клубі я показую закулісся своєї роботи на європейському ринку: звідки беруться клієнти, як ми з експертами робимо великі цифри без команди і як я працюю з ШІ.</p>
+    <p>469 ₴ на місяць для перших 100 учасників. Скасувати можна будь-коли.</p>
+    <div class="row">
+      <a class="btn" href="index.html#price">Дізнатись про клуб</a>
+      <a class="btn soft" href="https://www.instagram.com/smm_tanya__/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+</section>
+
+<footer class="band">
+  <div class="in">
+    <span>© Таня Остапенко · можна зберігати і ділитися з посиланням на сторінку</span>
+    <a href="index.html">Закритий клуб «Закулісся»</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var DATA = {
+    edit: {
+      who: "Монтую короткі відео для експертів з допомогою ШІ: швидко, у вашому стилі і без нескінченних правок",
+      for: "Експерти, які ведуть блог, але не мають часу або бажання сидіти над монтажем",
+      services: ["Reels і Shorts з ваших ефірів та довгих відео","Субтитри і обкладинки в єдиному стилі","Пакет на місяць: [N] роликів з графіком публікацій"],
+      cases: [
+        {t:"Навчальний кейс: блог знайомої майстрині манікюру", d:"Змонтувала 10 роликів з одного ефіру за допомогою ШІ і навчила його її стилю", r:"[перегляди або підписники за 2 тижні]"},
+        {t:"[Клієнт або ніша]", d:"[що саме ви зробили]", r:"[результат у цифрах]"}
+      ],
+      process: ["Ви надсилаєте відео і приклади, які вам подобаються","Я роблю 1 пробний ролик","Після вашого «так» монтую весь пакет","Ролики приходять готовими до публікації"]
+    },
+    threads: {
+      who: "Веду Threads для експертів і малого бізнесу: текстом, без відео і без вашого обличчя в кадрі",
+      for: "Ті, хто хоче нових клієнтів із соцмереж, але не готові знімати відео",
+      services: ["Стратегія і тон голосу на основі ваших сильних тем","[N] постів на тиждень і відповіді на коментарі","Щомісячний звіт: що спрацювало і що робимо далі"],
+      cases: [
+        {t:"Навчальний кейс: власний акаунт", d:"Протестувала 3 формати постів і щодня відповідала на коментарі", r:"[підписники або охоплення за місяць]"},
+        {t:"[Клієнт або ніша]", d:"[що саме ви зробили]", r:"[заявки, підписники, продажі]"}
+      ],
+      process: ["Коротке знайомство: про вас, ваш продукт і клієнтів","Я пишу 5 пробних постів у вашому стилі","Запускаємо щоденне ведення","Раз на місяць розбираємо цифри"]
+    },
+    launch: {
+      who: "Допомагаю експертам проводити запуски без хаосу: від плану до останнього дня продажів",
+      for: "Експерти, які продають курси, клуби або консультації і тонуть у дрібних задачах",
+      services: ["План запуску по днях і контроль дедлайнів","Тексти сторіс, розсилок і постів у вашому стилі","Збір відгуків і звіт після запуску"],
+      cases: [
+        {t:"Навчальний кейс: запуск безкоштовного марафону", d:"Склала план на 7 днів, вела чат учасників, зібрала відгуки", r:"[учасники, заявки, відгуки]"},
+        {t:"[Клієнт або ніша]", d:"[що саме ви зробили]", r:"[виручка, продажі, конверсія]"}
+      ],
+      process: ["Розбираємо ваш продукт і дату старту","Я складаю план запуску по днях","Веду задачі і нагадую про дедлайни","Після запуску робимо висновки на наступний"]
+    },
+    support: {
+      who: "Відповідаю вашим клієнтам так, щоб вони залишались і купували знову",
+      for: "Експерти з клубами, курсами і чатами, де клієнтам потрібна жива людина",
+      services: ["Відповіді в чатах і директі за вашими правилами","База готових відповідей на часті питання","Щотижневий звіт: що турбує клієнтів"],
+      cases: [
+        {t:"Навчальний кейс: база відповідей для знайомого магазину", d:"Зібрала 30 найчастіших питань і написала на них відповіді в стилі бренду", r:"[скільки часу зекономили на відповідях]"},
+        {t:"[Клієнт або ніша]", d:"[що саме ви зробили]", r:"[швидкість відповіді, повторні покупки]"}
+      ],
+      process: ["Ви даєте доступи і розповідаєте правила","Я збираю базу відповідей","Беру на себе чати у погоджений час","Раз на тиждень показую, що питають клієнти"]
+    },
+    tech: {
+      who: "Налаштовую техніку для онлайн-бізнесу: сайт, оплату, бота і розсилки, щоб усе працювало саме",
+      for: "Експерти, яким потрібно продавати онлайн, але без технічного головного болю",
+      services: ["Сайт або лендинг з оплатою","Підписка і доступ до закритого чату після оплати","Бот або розсилка для нагадувань"],
+      cases: [
+        {t:"Навчальний кейс: лендинг з оплатою для себе", d:"Зібрала сайт, підключила оплату і автоматичний доступ до групи", r:"[за скільки днів запустилось і скільки перших оплат]"},
+        {t:"[Клієнт або ніша]", d:"[що саме ви зробили]", r:"[оплати, заявки, зекономлений час]"}
+      ],
+      process: ["Розбираємо, що і як ви продаєте","Я пропоную просту схему без зайвих сервісів","Налаштовую і тестую разом з вами","Даю коротку інструкцію, щоб ви могли все самі"]
+    }
+  };
+  var current = "edit";
+  var sheet = document.getElementById("sheet");
+
+  function hi(s){ return s.replace(/\[([^\]]+)\]/g,'<span class="ph">[$1]</span>'); }
+  function esc(s){ return s.replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];}); }
+
+  function render(){
+    var d = DATA[current];
+    var cases = d.cases.map(function(c){
+      return '<li><b>'+hi(esc(c.t))+'</b><br>Задача і що я зробила: '+hi(esc(c.d))+'<br>Результат: '+hi(esc(c.r))+'</li>';
+    }).join("");
+    sheet.innerHTML =
+      '<div class="block"><h3><i>1</i>Хто я і що роблю</h3><p class="tip">Одне речення. Що ви робите, для кого і чим це зручно.</p><div class="ex">'+hi(esc(d.who))+'</div></div>'+
+      '<div class="block"><h3><i>2</i>Для кого</h3><p class="tip">Опишіть клієнта так, щоб він впізнав себе.</p><div class="ex">'+hi(esc(d.for))+'</div></div>'+
+      '<div class="block"><h3><i>3</i>Що я роблю</h3><p class="tip">Максимум 3 послуги. Конкретно, без «і ще багато чого».</p><div class="ex"><ul>'+d.services.map(function(s){return '<li>'+hi(esc(s))+'</li>';}).join("")+'</ul></div></div>'+
+      '<div class="block"><h3><i>4</i>Кейси</h3><p class="tip">Формула: задача, що зробили, результат цифрою. Навчальні кейси теж рахуються.</p><div class="ex"><ul>'+cases+'</ul></div></div>'+
+      '<div class="block"><h3><i>5</i>Як я працюю</h3><p class="tip">3-4 кроки, щоб людина бачила, що буде після «так».</p><div class="ex"><ul>'+d.process.map(function(s){return '<li>'+hi(esc(s))+'</li>';}).join("")+'</ul></div></div>'+
+      '<div class="block"><h3><i>6</i>Відгук і контакт</h3><p class="tip">Один короткий відгук і як з вами зв\'язатись в один клік.</p><div class="ex">«<span class="ph">[відгук клієнта в 1-2 реченнях]</span>»<br>Telegram: <span class="ph">[@ваш_нік]</span> · Email: <span class="ph">[ваша пошта]</span></div></div>';
+  }
+
+  function asText(){
+    var d = DATA[current];
+    var t = [];
+    t.push("1. ХТО Я І ЩО РОБЛЮ", d.who, "");
+    t.push("2. ДЛЯ КОГО", d.for, "");
+    t.push("3. ЩО Я РОБЛЮ"); d.services.forEach(function(s){t.push("- "+s);}); t.push("");
+    t.push("4. КЕЙСИ"); d.cases.forEach(function(c){t.push("- "+c.t, "  Задача і що я зробила: "+c.d, "  Результат: "+c.r);}); t.push("");
+    t.push("5. ЯК Я ПРАЦЮЮ"); d.process.forEach(function(s,i){t.push((i+1)+") "+s);}); t.push("");
+    t.push("6. ВІДГУК І КОНТАКТ", "«[відгук клієнта в 1-2 реченнях]»", "Telegram: [@ваш_нік] · Email: [ваша пошта]", "");
+    t.push("Шаблон від Тані Остапенко · smmtanya.github.io/portfolio.html");
+    return t.join("\n");
+  }
+
+  function copy(text, el){
+    function done(ok){ el.textContent = ok ? "Скопійовано, вставте у свій документ" : "Не вдалось скопіювати, виділіть текст вручну"; setTimeout(function(){el.textContent="";},4000); }
+    if (navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){done(true);}, function(){done(false);});
+    } else {
+      try{ var ta=document.createElement("textarea"); ta.value=text; document.body.appendChild(ta); ta.select(); var ok=document.execCommand("copy"); ta.remove(); done(ok);}catch(e){done(false);}
+    }
+  }
+
+  document.querySelectorAll(".role").forEach(function(b){
+    b.addEventListener("click", function(){
+      current = b.getAttribute("data-role");
+      document.querySelectorAll(".role").forEach(function(x){ x.setAttribute("aria-pressed", x===b ? "true" : "false"); });
+      render();
+      try{ localStorage.setItem("pf-role", current); }catch(e){}
+    });
+  });
+  document.getElementById("copy").addEventListener("click", function(){ copy(asText(), document.getElementById("status")); });
+  document.getElementById("print").addEventListener("click", function(){ window.print(); });
+  document.getElementById("copyAsk").addEventListener("click", function(){ copy(document.getElementById("ask").textContent.replace(/^«|»$/g,""), document.getElementById("status2")); });
+
+  // checklist
+  var boxes = Array.prototype.slice.call(document.querySelectorAll("#checklist input"));
+  var saved = {};
+  try{ saved = JSON.parse(localStorage.getItem("pf-check") || "{}"); }catch(e){ saved = {}; }
+  function upd(){
+    var n = boxes.filter(function(b){return b.checked;}).length;
+    document.getElementById("count").textContent = n===10 ? "Готово 10 з 10. Можна надсилати🍷" : "Готово "+n+" з 10";
+  }
+  boxes.forEach(function(b){
+    if (saved[b.id]) b.checked = true;
+    b.addEventListener("change", function(){
+      saved[b.id] = b.checked;
+      try{ localStorage.setItem("pf-check", JSON.stringify(saved)); }catch(e){}
+      upd();
+    });
+  });
+  upd();
+
+  try{ var r = localStorage.getItem("pf-role"); if (r && DATA[r]) { current = r; document.querySelectorAll(".role").forEach(function(x){ x.setAttribute("aria-pressed", x.getAttribute("data-role")===r ? "true" : "false"); }); } }catch(e){}
+  render();
+})();
+</script>
+</body>
+</html>

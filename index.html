@@ -138,6 +138,18 @@ footer{padding-block:36px 52px;font-size:14px;color:var(--soft);border-top:1px s
 footer .in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px}
 footer a{color:var(--wine)}
 
+
+/* gift */
+.gift{padding-block:64px}
+.gift .box{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:clamp(26px,4vw,48px)}
+.gift h2{font-size:clamp(30px,3.8vw,44px);margin-top:12px}
+.gift p.d{margin-top:16px;max-width:52ch}
+.gift ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.gift li{display:grid;grid-template-columns:22px 1fr;gap:10px;font-size:16px}
+.gift li::before{content:"✦";color:var(--wine);font-size:14px;line-height:1.9}
+.gift .btn{margin-top:26px}
+@media (max-width:880px){.gift .box{grid-template-columns:1fr;gap:24px}.gift .btn{width:100%}}
+
 @media (max-width:880px){
   .hero .in,.about .in,.test .in,.how .in{grid-template-columns:1fr}
   .topic-grid{grid-template-columns:1fr}
@@ -160,7 +172,7 @@ footer a{color:var(--wine)}
   <div class="in">
     <div class="logo">Закулісся</div>
     <div style="display:flex;gap:22px;align-items:center">
-      <a href="https://www.instagram.com/smm_tanya__/" target="_blank" rel="noopener">Instagram</a>
+      <a href="portfolio.html">Подарунок</a>
       <a href="#price">Вступити в клуб</a>
     </div>
   </div>
@@ -238,6 +250,25 @@ footer a{color:var(--wine)}
       <p>Три питання. В кінці я напишу 3 кроки, з яких я б почала на вашому місці.</p>
     </div>
     <div class="quiz" id="quizBox" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="band gift" id="gift">
+  <div class="in">
+    <div class="box">
+      <div>
+        <div class="label">Подарунок · безкоштовно</div>
+        <h2>Портфоліо, яке <em>продає за вас</em></h2>
+        <p class="d">Шаблон, за яким я сама дивлюсь на людей, коли шукаю когось у проєкт. Оберіть свою роль і перепишіть готовий приклад під себе.</p>
+        <a class="btn" href="portfolio.html">Забрати шаблон</a>
+      </div>
+      <ul>
+        <li>5 готових прикладів: монтаж з ШІ, Threads, запуски, підтримка, техніка</li>
+        <li>Чекліст перед відправкою на 10 пунктів</li>
+        <li>Як отримати перші кейси без досвіду</li>
+        <li>Шаблон, як попросити рекомендацію</li>
+      </ul>
+    </div>
   </div>
 </section>
 

